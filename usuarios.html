@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Users</title>
+  <script src="usuarios.js"></script>
+
+</head>
+
+<body>
+  <div id="table">
+      <input type="button" value="Load Users" onclick="loadUsers()">
+      <br/>
+      <table border="1">
+        <thead>
+          <td>Id</td>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Phone</td>
+          <td>Gender</td>
+          <td>Action</td>
+        </thead>
+        <tbody id="users">
+        </tbody>
+      </table>
+      <br/>
+  </div>
+
+  <div hidden id="formUser">
+    <h1>User</h1>
+    Id:    <input type="text" id="id" placeholder="Id" required/>
+    <br/> 
+    Name:    <input type="text" id="name" placeholder="Name" required/>
+    <br/> 
+    Age:    <input type="number" id="age" placeholder="Age" required/>
+    <br/> 
+    Phone:    <input type="text" id="phone" placeholder="Phone" required/>
+    <br/>
+     Gender:    <input type="text" id="gender" placeholder="Gender" required/>
+    <br/>
+    <input type="button" value="Edit" onclick="editData()" />
+  </div>
+</body>
+
+</html>

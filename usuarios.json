@@ -1,0 +1,74 @@
+{"usuarios":
+  [
+    {
+      "id": 193047298,
+      "name": "Gabriel",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 5321342434,
+      "name": "Andres",
+      "age": "21",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 9876543454,
+      "name": "Daniel",
+      "age": "19",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 654342434,
+      "name": "juan",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 684445678,
+      "name": "Laura",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "F"
+    },
+    {
+      "id": 744567654,
+      "name": "Daniela",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "F"
+    },
+    {
+      "id": 654533342,
+      "name": "Julian",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 545434325,
+      "name": "Carlos",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 5232323,
+      "name": "Pablo",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    },
+    {
+      "id": 877644343,
+      "name": "Estaban",
+      "age": "20",
+      "phone": "323846263",
+      "gender": "M"
+    }
+  ]
+}
