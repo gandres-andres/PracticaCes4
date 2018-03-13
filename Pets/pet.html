@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="pet.js"></script>
+</head>
+
+<body>
+    <form>
+        <span>Name:</span>
+        <input type="text" id="name" name="name" placeholder="name">
+        <br>
+        <span>Age:</span>
+        <input type="number" id="age" name="age" placeholder="age">
+        <br>
+        <span>Size:</span>
+        <input type="number" id="size" name="size" placeholder="size">
+        <br>
+        <select id="select" onchange="change()">
+            <option id="0" disabled selected>select</option>
+            <option id="cat" value="cat">cat</option>
+            <option id="dog" value="dog">dog</option>
+        </select>
+        <br>
+        <div id="catvac" hidden>
+            <span>isVaccinated:</span>
+            <input type="checkbox" id="isVaccinated" name="isVaccinated">
+            <br>
+        </div>
+        <div id="dogfam" hidden>
+            <span>family</span>
+            <input type="checkbox" id="family" name="family">
+            <br>
+        </div>
+        <input type="button" value="Show" onclick="show()">
+    </form>
+    </div>
+    <p id="input"></p>
+</body>
+
+</html>
