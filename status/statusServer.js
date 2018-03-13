@@ -2,11 +2,22 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 var url = require('url');
+var app = require('express');
 
 function send404(response) {
     response.writeHead(404, { 'Content-Type': 'text/plain' });
     response.write('Error 404: Resource not found.');
     response.end();
+}
+
+function sendStatus(res, status) {
+        var html = path.join(__dirname, 'public', 'pushStatus.html');
+        html = (fs.readFileSync(html)).toString();
+        html.replace("titulo",status.Status);
+    
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(status.Message);
+    fs.createReadStream('./public/pushStatus.html').pipe(res);
 }
 
 var mimeLookup = {
@@ -28,9 +39,10 @@ http.createServer(function (req, res) {
         var mimeType = mimeLookup[fileExt];
         if (!mimeType) {
             var q = url.parse(req.url, true).query;
-            if(q != null){
-                var txt = q.Status + " " + q.Message;
-            }else{
+            if (q != undefined) {
+                sendStatus(res, q);
+                return;
+            } else {
                 send404(res);
                 return;
             }
