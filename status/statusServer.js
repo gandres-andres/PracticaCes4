@@ -11,13 +11,11 @@ function send404(response) {
 }
 
 function sendStatus(res, status) {
-        var html = path.join(__dirname, 'public', 'pushStatus.html');
-        html = (fs.readFileSync(html)).toString();
-        html.replace("titulo",status.Status);
-    
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.write(status.Message);
-    fs.createReadStream('./public/pushStatus.html').pipe(res);
+    res.write(`<title>${status.Status}</title>`);
+    res.write(''+status.Message);
+    res.write('</br><button><a href="status.html">back</a></button>');
+    res.end();
 }
 
 var mimeLookup = {
