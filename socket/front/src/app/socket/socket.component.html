@@ -1,7 +1,13 @@
+<h1>Channel {{channel}}</h1>
 <ul id="messages">
-  <li *ngFor="let message of messages">{{message}}</li>
+  <li *ngFor="let msg of messages">{{msg.message}}</li>
 </ul>
 <div>
+  <select [(ngModel)]="channel" (change)="changeChannel()">
+    <option *ngFor="let cnn of channels" [value]="cnn.id">
+      {{cnn.name}}
+    </option>
+  </select>
   <input [(ngModel)]="message" id="m" placeholder="message">
   <button (click)="sendMessage()">Send</button>
 </div>
