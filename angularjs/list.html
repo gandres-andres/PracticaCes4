@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<input type="search" ng-model="filter"/>
+<table border="1" ng-controller="listController as listCtrl">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in listCtrl.list | filter : filter | orderBy : 'name'">
+            <td> {{user.id | binaryfilter}} </td>
+            <td> {{user.name | uppercase}} </td>
+            <td> {{user.username | lowercase}} </td>
+            <td><a href="#!detail" ng-click="listCtrl.getDetail(user)">Detail</a></td>
+        </tr>
+    </tbody>
+=======
 <table border="1" ng-controller="listController as listCtrl">
     <thead>
         <tr>
@@ -15,4 +35,5 @@
             <td><a href="#!detail" ng-click="listCtrl.getDetail(user)">Detail</a></td>
         </tr>
     </tbody>
+>>>>>>> fbab4352561fb5aa4b7945df4b8d0d0476bb44e9
 </table>
