@@ -1,0 +1,18 @@
+<table border="1" ng-controller="listController as listCtrl">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in listCtrl.list">
+            <td> {{user.id}} </td>
+            <td> {{user.name}} </td>
+            <td> {{user.username}} </td>
+            <td><a href="#!detail" ng-click="listCtrl.getDetail(user)">Detail</a></td>
+        </tr>
+    </tbody>
+</table>
